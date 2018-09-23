@@ -8,6 +8,7 @@ class Intent extends Component {
       this.state = {
         intent:null,
         index: 0,
+        intentNo:null,
         nColour:'ff0000',
         yColour:'008000'
       };
@@ -19,13 +20,19 @@ class Intent extends Component {
      })
     }
     render() {
+      if(this.props.selectedIntent == this.state.index){
         return (
-            <div class="intentClass">
+            <div class="intentClass2">
               {this.props.intent}
             </div>
          );
+        }else{
+          return (
+          <div class="intentClass">
+            {this.props.intent}
+          </div>
+          );
+        }
     }
 }
 export default Intent;
-
-// {this.props.intent}

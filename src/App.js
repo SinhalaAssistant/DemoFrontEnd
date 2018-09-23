@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import './intent/intent.css'
 import Demo from './recorder/recorder2.js';
@@ -7,16 +6,6 @@ import {Container,Row,Col} from 'react-grid-system';
 import { Provider} from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic';
 import Intent from './intent/intent.js'
-// import Popup from 'react-popup';
-// import Dropdown from 'react-dropdown'
-
-// import ReactDOM from 'react-dom';
-
-
-// import './dropdown.scss';
-
-//drop down
-// import Dropdown from './dropDown/dropDown.js';
 
 
 class App extends Component {
@@ -24,43 +13,29 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state ={
-      command:'0',
-      // namesListSinhala:['වැඩිහිටි සුරැකුම් ක්ෂේත්‍රය','බැංකු ක්ෂේත්‍රය']
+      intent: null
     }
-    // this.handleChanges=this.handleChanges.bind(this);
   }
 
 
   ComponentDidMount(){
     
   }
-  handleDomainChanges(e){
-    // Popup.alert('I am alert, nice to meet you');
+
+  handleIntent(e){
+    console.log("I handle intents");
     this.setState({
-      domain:e,
-      capability:'0'
+      intent:e,
     })
     
   }
-
-  handleCommandChanges(e){
-    console.log(e);
+  
+  toInit(){
     this.setState({
-      command:e
+      intent: null
     })
   }
 
-  handleSelectChanges(e){
-    console.log(this.state.command);
-    this.setState({
-      capability:e.target.value,
-      // command : null
-    })
-    console.log(this.state.command+"after");
-  }
-  refreshing(e){
-
-  }
   render() {
     var options = {
       position: 'top center',
@@ -76,20 +51,26 @@ class App extends Component {
       
       <Row>
         <Col sm={4}>
-        <Intent
-          intent="ගිණුමේ ශේෂය විමසීම" index="1"
+        <Intent       
+          intent="ගිණුමේ ශේෂය විමසීම" 
+          index="1"
+          selectedIntent = {this.state.intent}
         />
         <br/>
         </Col>
         <Col sm={4}>
         <Intent
-          intent="මුදල් තැම්පත් කිරීමට විමසීම" index="2"
+          intent="මුදල් තැම්පත් කිරීමට විමසීම"
+          index="2"
+          selectedIntent = {this.state.intent}
         />
         <br/>
         </Col>
         <Col sm={4}>
         <Intent
-          intent="මුදල් ලබා ගැනීමට කිරීමට විමසීම" index="3"
+          intent="මුදල් ලබා ගැනීමට කිරීමට විමසීම"
+          index="3"
+          selectedIntent = {this.state.intent}
         />
         <br/>
         </Col>
@@ -99,19 +80,25 @@ class App extends Component {
       <Row>
         <Col sm={4}>
         <Intent
-          intent="බිල් ගෙවීම්" index="4"
+          intent="බිල් ගෙවීම්"
+          index="4"
+          selectedIntent = {this.state.intent}
         />
         <br/>
         </Col>
         <Col sm={4}>
         <Intent
-          intent="ගිණුම් අතර මුදල් හුවමාරු කිරීම" index="5"
+          intent="ගිණුම් අතර මුදල් හුවමාරු කිරීම" 
+          index="5"
+          selectedIntent = {this.state.intent}
         />
         <br/>
         </Col>
         <Col sm={4}>
         <Intent
-          intent="ණයපත් ගෙවීම්" index="6"
+          intent="ණයපත් ගෙවීම්" 
+          index="6"
+          selectedIntent = {this.state.intent}
         />
         <br/>
         </Col>
@@ -123,9 +110,8 @@ class App extends Component {
         <Col sm={5}>
         <br/>   
         <Demo 
-          domain ={this.state.domain}
-          capability ={this.state.capability}
-          command = {this.state.command}
+          handledIntent={this.handleIntent.bind(this)}
+          toInit ={this.toInit.bind(this)}
         />
         <Col sm={3}/>
         </Col>

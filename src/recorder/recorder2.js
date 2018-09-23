@@ -84,7 +84,16 @@ class Demo extends Component {
     });
   }
 
+  changeIntent = (success) => {
+      this.props.handledIntent(success.data)
+  }
+
+  changetoInit = () => {
+      this.props.toInit()
+  }
+
   onStart=() => {
+    this.changetoInit()
     console.log('You can tap into the onStart callback');
   }
 
@@ -122,7 +131,8 @@ class Demo extends Component {
     };
     var self = this;
     post('/api/file', formData,config).then(function (success) {
-      
+      console.log(success)
+      self.changeIntent(success);
       self.props.alert.success("Record Uploaded!");
       self.setState({
         loading:false
