@@ -1,0 +1,11 @@
+.Intent {
+    margin: 40px;
+    border: 10px dotted pink;
+  }
+
+.intentClass{
+    width: 100px;
+    border: 15px solid red;
+    padding: 25px;
+    margin: 25px;
+}
