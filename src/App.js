@@ -68,7 +68,7 @@ class App extends Component {
         </Col>
         <Col sm={4}>
         <Intent
-          intent="මුදල් ලබා ගැනීමට කිරීමට විමසීම"
+          intent="මුදල් ගැනීමට විමසීම"
           index="3"
           selectedIntent = {this.state.intent}
         />

@@ -133,7 +133,7 @@ class Demo extends Component {
     post('/api/file', formData,config).then(function (success) {
       console.log(success)
       self.changeIntent(success);
-      self.props.alert.success("Record Uploaded!");
+      self.props.alert.success("Intent Recieved!");
       self.setState({
         loading:false
       });

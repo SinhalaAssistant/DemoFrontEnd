@@ -1,5 +1,8 @@
 .App {
+  /* background: url('/public/back.jpg') no-repeat; */
   text-align: center;
+  /* background-color: #e4e7db; */
+  /* background-image: url("/public/back.jpg"); */
 }
 
 .App-logo {
