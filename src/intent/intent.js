@@ -22,13 +22,13 @@ class Intent extends Component {
     render() {
       if(this.props.selectedIntent == this.state.index){
         return (
-            <div class="intentClass2">
+            <div className="intentClass2">
               {this.props.intent}
             </div>
          );
         }else{
           return (
-          <div class="intentClass">
+          <div className="intentClass">
             {this.props.intent}
           </div>
           );
