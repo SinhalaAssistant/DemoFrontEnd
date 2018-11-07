@@ -5,15 +5,25 @@
 
 .intentClass{
     width: 100px;
-    border: 15px solid red;
+    height: 10vh;
+    border: 15px solid #c0392b;
     padding: 15px;
     margin: 15px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 4px 8px rgba(0,0,0,0.15);
     /* background-color: #e0ebeb; */
 }
 
 .intentClass2{
     width: 100px;
-    border: 15px solid rgb(0, 255, 13);
-    padding: 25px;
-    margin: 25px;
+    height: 10vh;
+    border: 15px solid #1abc9c;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    align-content: center;
+    justify-content: center;
 }

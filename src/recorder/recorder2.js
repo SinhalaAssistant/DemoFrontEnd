@@ -65,11 +65,8 @@ class Demo extends Component {
     }
   }
   startRecording = () => { 
-    if(this.props.command ===''){
-        this.props.alert.show("Select a Command to Record")
-    }else if(!this.validator(this.props.domain))
-    {
-      this.props.alert.show("Select a Command to Record")
+    if(this.props.type ==='0'){
+        this.props.alert.error("Select a model to classify")
     }else{
     this.setState({
       record: true,
@@ -119,9 +116,7 @@ class Demo extends Component {
     // formData.append('file',buffer);
 
     formData.append('file',this.state.data);
-    formData.append('command',this.props.command);
-    formData.append('domain',this.props.domain);
-    formData.append('capability',this.props.capability); 
+    formData.append('type',this.props.type);
     // form
     const config = {
         headers: {
