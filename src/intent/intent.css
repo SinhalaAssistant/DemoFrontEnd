@@ -6,8 +6,11 @@
 .intentClass{
     width: 100px;
     height: 10vh;
-    border: 15px solid #c0392b;
+    border: none;
     padding: 15px;
+    color: aliceblue;
+    background:  #c0392b;
+    font-weight: 800;
     margin: 15px;
     border-radius: 15px;
     font-size: 1.1rem;
@@ -20,10 +23,15 @@
 .intentClass2{
     width: 100px;
     height: 10vh;
-    border: 15px solid #1abc9c;
+    border: none;
     padding: 15px;
     margin: 15px;
+    color: aliceblue;
+    background:  #1abc9c;
     border-radius: 15px;
+    font-weight: 800;
+    font-size: 1.1rem;
     align-content: center;
     justify-content: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 4px 8px rgba(0,0,0,0.15);
 }

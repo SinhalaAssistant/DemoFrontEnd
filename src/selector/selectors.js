@@ -19,7 +19,8 @@ class Selector extends Component {
       value={names[index]} key={index}
       pointColor={'#1E90FF'} 
       rootColor={'black'}
-      padding={10}
+      padding={15}
+      
       >
       {name}
       </ReversedRadioButton>);
@@ -30,13 +31,14 @@ class Selector extends Component {
         <div className="selector" >
 
         <h3 className="header" >Select a model for Intent Classification</h3>
-        
+        <b className="radio">
         <RadioGroup 
           onChange={ this.props.handleTypeChanges} 
           horizontal
         >
         {radioButtons}
         </RadioGroup>
+        </b>
         </div>
       );
     }
